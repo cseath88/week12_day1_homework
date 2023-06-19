@@ -10,21 +10,18 @@ public class Waterbottle {
     }
 
     public int takeDrink() {
-        return this.volume -= 10;
+        if(this.volume >= 10) {
+            return this.volume -= 10;
+        }
+        return this.volume;
     }
 
     public int emptyBottle() {
-        if(this.volume >= 0) {
-            return 0;
-        }
-        return this.volume;
+       return this.volume = 0;
     }
 
     public int fillBottle() {
-        if(this.volume <= 99) {
-            return 100;
-        }
-        return this.volume;
+        return this.volume = 100;
     }
 
 }
